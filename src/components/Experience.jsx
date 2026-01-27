@@ -2,6 +2,20 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      company: "Freelance",
+      role: "Solutions Architect",
+      duration: "August 2025 - Present",
+      location: "Austin, TX",
+      description: [
+        `Architected and deployed an AI-driven lead qualification engine using twilio, openAI, and Elevenlabs, resulting in a 40% increase in sales-qualified leads (SQLs) and reducing manual vetting time by 85%.`,
+        `Engineered end-to-end workflow automations via Make and n8n, streamlining operations and saving an estimated 60+ manual hours per month.`,
+        `Optimized full-funnel digital marketing strategies, leveraging Google Ads and Google Search SEO frameworks to drive a 25% improvement in conversion rates and a significant boost in organic visibility, as well as web traffic.`,
+        `Accelerated development lifecycles by utilizing Cursor for rapid prototyping and deployment of complex workflows, reducing implementation time by 30%.`,
+        `Consulted directly with business owners to audit legacy systems and implement scalable architectures that bridge the gap between manual processes and autonomous AI operations.`
+      ],
+    },
+    {
+      id: 2,
       company: "Adaptive Insurance",
       role: "Software Engineer",
       duration: "May 2025 - August 2025",
@@ -17,7 +31,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 2,
+      id: 3,
       company: "Dun and Bradstreet (D&B)",
       role: "Software Engineering Intern",
       duration: "May 2024 - August 2024",
@@ -33,7 +47,7 @@ const Experience = () => {
       ],
     },
     {
-      id: 3,
+      id: 4,
       company: "Amazon.com",
       role: "Software Engineering Intern",
       duration: "May 2023 - August 2023",

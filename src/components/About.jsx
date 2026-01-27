@@ -14,7 +14,7 @@ const About = () => {
             
             <p className="text-lg text-gray-700 leading-relaxed">
               When I'm not coding, you can find me exploring new technologies, contributing to 
-              open-source projects, or sharing knowledge with the developer community. I believe 
+              open-source projects, or sharing knowledge with other developers, talking about new projects and problems solved. I believe 
               in continuous learning and staying up-to-date with industry best practices.
             </p>
             
@@ -23,19 +23,19 @@ const About = () => {
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>5+ years of experience in web development</span>
+                  <span>2+ years of experience in web development</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Expertise in React, Node.js, and modern JavaScript</span>
+                  <span>Expertise in React, Node.js, and modern JavaScript, TypeScript, PostgreSQL, MongoDB, and Python.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Strong focus on clean code and best practices</span>
+                  <span>Strong focus on clean code, scalable architecture, and best practices, leveraging AI to enhance productivity and output.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">✓</span>
-                  <span>Passionate about user experience and design</span>
+                  <span>Passionate about user experience and design.</span>
                 </li>
               </ul>
             </div>
@@ -43,7 +43,7 @@ const About = () => {
           
           <div className="flex justify-center">
             <div className="w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full flex items-center justify-center shadow-xl">
-              <span className="text-6xl text-white font-bold">JD</span>
+              <span className="text-6xl text-white font-bold">MD</span>
             </div>
           </div>
         </div>
