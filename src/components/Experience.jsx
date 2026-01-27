@@ -66,7 +66,7 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="section-container bg-gray-50">
+    <section id="experience" className="section-container bg-gray-50 dark:bg-gray-900">
       <h2 className="section-title">Work Experience</h2>
       
       <div className="max-w-4xl mx-auto">
@@ -74,23 +74,23 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={exp.id}
-              className="bg-white rounded-lg shadow-md p-6 md:p-8 hover:shadow-lg transition-shadow"
+              className="bg-white dark:bg-gray-950 rounded-lg shadow-md dark:shadow-black/30 p-6 md:p-8 hover:shadow-lg transition-shadow border border-transparent dark:border-gray-800"
             >
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-800">{exp.role}</h3>
-                  <p className="text-xl text-blue-600 font-semibold mt-1">{exp.company}</p>
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{exp.role}</h3>
+                  <p className="text-xl text-blue-600 dark:text-blue-400 font-semibold mt-1">{exp.company}</p>
                 </div>
                 <div className="mt-2 md:mt-0 text-right">
-                  <p className="text-gray-600 font-medium">{exp.duration}</p>
-                  <p className="text-gray-500 text-sm">{exp.location}</p>
+                  <p className="text-gray-600 dark:text-gray-300 font-medium">{exp.duration}</p>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm">{exp.location}</p>
                 </div>
               </div>
               
               <ul className="space-y-2 mt-4">
                 {exp.description.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start text-gray-700">
-                    <span className="text-blue-600 mr-3 mt-1">•</span>
+                  <li key={itemIndex} className="flex items-start text-gray-700 dark:text-gray-300">
+                    <span className="text-blue-600 dark:text-blue-400 mr-3 mt-1">•</span>
                     <span>{item}</span>
                   </li>
                 ))}

@@ -19,7 +19,7 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="section-container bg-white">
+    <section id="skills" className="section-container bg-white dark:bg-gray-950">
       <h2 className="section-title">Skills & Technologies</h2>
       
       <div className="max-w-6xl mx-auto">
@@ -27,14 +27,14 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="bg-gray-50 dark:bg-gray-900 rounded-lg p-6 shadow-sm hover:shadow-md dark:shadow-black/30 transition-shadow border border-transparent dark:border-gray-800"
             >
-              <h3 className="text-xl font-bold text-gray-800 mb-4">{category.category}</h3>
+              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100 mb-4">{category.category}</h3>
               <div className="flex flex-wrap gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-4 py-2 bg-white border border-gray-200 rounded-lg text-gray-700 font-medium hover:border-blue-500 hover:text-blue-600 transition-colors"
+                    className="px-4 py-2 bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 rounded-lg text-gray-700 dark:text-gray-200 font-medium hover:border-blue-500 hover:text-blue-600 dark:hover:border-blue-400 dark:hover:text-blue-300 transition-colors"
                   >
                     {skill}
                   </span>

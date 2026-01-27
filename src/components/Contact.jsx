@@ -56,17 +56,17 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="section-container bg-white">
+    <section id="contact" className="section-container bg-white dark:bg-gray-950">
       <h2 className="section-title">Get In Touch</h2>
       
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Send a Message</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Name
                 </label>
                 <input
@@ -76,13 +76,13 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-lg bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                   placeholder="Your name"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Email
                 </label>
                 <input
@@ -92,13 +92,13 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-lg bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
                   placeholder="your.email@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
                 </label>
                 <textarea
@@ -108,7 +108,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-800 rounded-lg bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
                   placeholder="Your message..."
                 />
               </div>
@@ -130,10 +130,10 @@ const Contact = () => {
           
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">Contact Information</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-6">Contact Information</h3>
             <div className="space-y-6">
               <div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
                   I'm always open to discussing new projects, creative ideas, or opportunities 
                   to be part of your visions. Feel free to reach out through the form or 
                   connect with me on social media.
@@ -142,14 +142,14 @@ const Contact = () => {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-950/50 rounded-lg flex items-center justify-center border border-transparent dark:border-blue-900/60">
+                    <svg className="w-6 h-6 text-blue-600 dark:text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800">Email</p>
-                    <a href="mailto:michaeldecuire18@gmail.com" className="text-blue-600 hover:underline">
+                    <p className="font-semibold text-gray-800 dark:text-gray-100">Email</p>
+                    <a href="mailto:michaeldecuire18@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
                       michaeldecuire18@gmail.com
                     </a>
                   </div>
@@ -157,7 +157,7 @@ const Contact = () => {
               </div>
               
               <div className="pt-6">
-                <h4 className="text-lg font-semibold text-gray-800 mb-4">Connect With Me</h4>
+                <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100 mb-4">Connect With Me</h4>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
                     <a
@@ -165,7 +165,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-gray-700 hover:bg-blue-600 hover:text-white transition-colors"
+                      className="w-12 h-12 bg-gray-100 dark:bg-gray-900 rounded-lg flex items-center justify-center text-gray-700 dark:text-gray-200 hover:bg-blue-600 dark:hover:bg-blue-600 hover:text-white transition-colors border border-transparent dark:border-gray-800"
                       aria-label={social.name}
                     >
                       {social.icon}
