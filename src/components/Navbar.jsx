@@ -3,7 +3,9 @@ import { useState, useEffect } from 'react'
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState(() =>
+    document.documentElement.classList.contains('dark') ? 'dark' : 'light'
+  )
 
   const navItems = [
     { name: 'Home', id: 'hero' },
@@ -48,8 +50,14 @@ const Navbar = () => {
       setTheme(nextTheme)
     }
 
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange)
+    // Safari < 14 uses addListener/removeListener
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange)
+      return () => mediaQuery.removeEventListener('change', handleChange)
+    }
+
+    mediaQuery.addListener(handleChange)
+    return () => mediaQuery.removeListener(handleChange)
   }, [])
 
   const scrollToSection = (id) => {
@@ -61,7 +69,8 @@ const Navbar = () => {
   }
 
   const toggleTheme = () => {
-    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    const currentlyDark = document.documentElement.classList.contains('dark')
+    const nextTheme = currentlyDark ? 'light' : 'dark'
     localStorage.setItem('theme', nextTheme)
     document.documentElement.classList.toggle('dark', nextTheme === 'dark')
     setTheme(nextTheme)
