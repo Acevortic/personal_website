@@ -7,7 +7,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I'm a passionate full-stack developer with a love for creating elegant solutions 
+              I'm a passionate backend focused, full-stack developer with a love for creating elegant solutions 
               to complex problems. With experience in modern web technologies, I specialize in 
               building responsive, user-friendly applications that deliver exceptional user experiences.
             </p>
