@@ -1,6 +1,6 @@
 import aiReceptionistImg from '../images/AI_receptionist.png'
 import discordVoiceBotImg from '../images/discord_voice_bot.png'
-import localLLMImg from '../images/local_llm.png'
+import localLLMImg from '../images/Local_LLM_API.png'
 
 export const projects = [
   {
