@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { writeFileSync } from 'fs'
+import { mkdirSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
 // Plugin to create 404.html for GitHub Pages SPA routing
@@ -28,7 +28,9 @@ const create404Plugin = () => {
   <body>
   </body>
 </html>`
-      writeFileSync(join(__dirname, 'dist', '404.html'), html)
+      const outDir = join(process.cwd(), 'dist')
+      mkdirSync(outDir, { recursive: true })
+      writeFileSync(join(outDir, '404.html'), html)
     }
   }
 }
