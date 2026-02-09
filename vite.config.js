@@ -2,12 +2,19 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { mkdirSync, writeFileSync } from 'fs'
 import { join } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
 
 // Plugin to create 404.html for GitHub Pages SPA routing
 const create404Plugin = () => {
+  let outDir = ''
   return {
     name: 'create-404',
-    writeBundle(options) {
+    configResolved(config) {
+      outDir = join(config.root, config.build.outDir)
+    },
+    writeBundle() {
       const html = `<!DOCTYPE html>
 <html>
   <head>
@@ -28,8 +35,9 @@ const create404Plugin = () => {
   <body>
   </body>
 </html>`
-      const outDir = options.dir || join(process.cwd(), 'dist')
-      writeFileSync(join(outDir, '404.html'), html)
+      const dir = outDir || join(__dirname, 'dist')
+      mkdirSync(dir, { recursive: true })
+      writeFileSync(join(dir, '404.html'), html)
     }
   }
 }
