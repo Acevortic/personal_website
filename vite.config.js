@@ -7,7 +7,7 @@ import { join } from 'path'
 const create404Plugin = () => {
   return {
     name: 'create-404',
-    closeBundle() {
+    writeBundle(options) {
       const html = `<!DOCTYPE html>
 <html>
   <head>
@@ -28,8 +28,7 @@ const create404Plugin = () => {
   <body>
   </body>
 </html>`
-      const outDir = join(process.cwd(), 'dist')
-      mkdirSync(outDir, { recursive: true })
+      const outDir = options.dir || join(process.cwd(), 'dist')
       writeFileSync(join(outDir, '404.html'), html)
     }
   }
