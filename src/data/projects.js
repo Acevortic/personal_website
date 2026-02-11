@@ -21,7 +21,7 @@ export const projects = [
   {
   id: 3,
   title: "Local LLM API",
-  description: "A Discord voice bot that actively listens to gaming sessions and automatically generates AI-powered summaries of conversations and gameplay moments. Built with Python and the Discord API, it processes voice transcripts using OpenAI to create intelligent summaries that capture key moments, strategies, and highlights from gaming sessions with friends.",
+  description: "Built a local LLM API using MLX to run quantized models directly on-device, exposing a lightweight REST interface for secure, low-latency inference without relying on external cloud providers.",
   technologies: ["Python", "Ollama", "Local LLM", "MLX"],
   image: localLLMImg,
   liveUrl: "https://www.loom.com/share/c342df19b0b24fdfa1006a0da64c002a",
