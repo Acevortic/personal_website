@@ -1,6 +1,7 @@
 import aiReceptionistImg from '../images/AI_receptionist.png'
 import discordVoiceBotImg from '../images/discord_voice_bot.png'
 import localLLMImg from '../images/Local_LLM_API.png'
+import RAGLLMImg from '../images/RAGLLMImg.png'
 
 export const projects = [
   {
@@ -46,4 +47,19 @@ export const projects = [
     image: localLLMImg,
     liveUrl: "https://www.loom.com/share/c342df19b0b24fdfa1006a0da64c002a",
   },
+{
+  id: 4,
+  title: "Local RAG-powered document processor for codebases and knowledge retrieval",
+  businessProblem: "Companies want to query codebases and internal docs with LLMs but can't send proprietary data to cloud APIs—per-token costs add up and sending source code or sensitive docs off-premise creates security and compliance risk.",
+  impacts: [
+    { label: "Data never leaves your environment", value: "Security & privacy" },
+    { label: "No per-token cloud API costs", value: "Predictable spend" },
+    { label: "Sensitive code & docs", value: "Stay on-device" },
+    { label: "RAG over local knowledge", value: "Codebase & doc retrieval" },
+  ],
+  description: "A local LLM API built in Python with RAG (retrieval-augmented generation) to index and query documents and codebases on-device. Avoids per-token cloud API calls entirely—inference and embeddings run locally via Ollama and ChromaDB, so company data never leaves your infrastructure.",
+  technologies: ["Python", "Ollama", "Local LLM", "RAG", "ChromaDB"],
+  image: RAGLLMImg,
+  liveUrl: "https://www.loom.com/share/75082ef83aae4e498320ca33a1dd7c67",
+},
 ]
