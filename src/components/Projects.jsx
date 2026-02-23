@@ -21,8 +21,30 @@ const Projects = () => {
             
             <div className="p-6">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-3">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-              
+
+              {project.businessProblem && (
+                <div className="mb-4">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-1.5">Why it matters</h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">{project.businessProblem}</p>
+                </div>
+              )}
+
+              {project.impacts && project.impacts.length > 0 && (
+                <div className="mb-4">
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2">Impact</h4>
+                  <ul className="space-y-1.5 text-sm">
+                    {project.impacts.map((impact, index) => (
+                      <li key={index} className="flex justify-between gap-2 text-gray-600 dark:text-gray-300 border-b border-gray-100 dark:border-gray-800/80 pb-1.5 last:border-0 last:pb-0">
+                        <span className="text-gray-500 dark:text-gray-400">{impact.label}</span>
+                        <span className="font-medium text-gray-800 dark:text-gray-200 shrink-0">{impact.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed text-sm">{project.description}</p>
+
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech, index) => (
                   <span
@@ -33,20 +55,22 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              
-              <div className="flex gap-4">
-                <a
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold flex items-center gap-2"
-                >
-                  Live Demo
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
+
+              {project.liveUrl && (
+                <div className="flex gap-4">
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold flex items-center gap-2"
+                  >
+                    Live Demo
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}

@@ -37,7 +37,6 @@ const Experience = () => {
       duration: "May 2024 - August 2024",
       location: "Austin, TX",
       description: [
-        "Implemented major components of the new website redesign, serving over 12M users globally.",
         `Architected and executed core elements of a website redesign, enhancing user experience for over 12 million monthly
         visitors and increasing functionality with a 20% uplift in user engagement metrics.`,
         `Built and sustained scalable, high-efficiency features using XML, React, TypeScript, and Java, achieving 99.9% uptime
